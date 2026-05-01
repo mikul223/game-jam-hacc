@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public int currentDay = 1;       // текущий день (1, 2, 3)
     public int mistakes = 0;         // сколько ошибок сделано
     public int maxMistakes = 1;      // сколько ошибок можно без плохой концовки
+    public bool workDoneToday = false;
 
     void Awake()
     {

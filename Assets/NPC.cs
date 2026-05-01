@@ -51,7 +51,7 @@ public class NPC : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && promptText != null)
         {
             playerNear = true;
             promptText.SetActive(true);
@@ -60,7 +60,7 @@ public class NPC : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && promptText != null)
         {
             playerNear = false;
             promptText.SetActive(false);

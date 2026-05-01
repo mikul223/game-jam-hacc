@@ -72,6 +72,7 @@ public class BedTrigger : MonoBehaviour
 
         // Переход на следующий день
         GameManager.instance.NextDay();
+        GameManager.instance.workDoneToday = false;
 
         // Показать, что начался новый день
         Debug.Log("День " + GameManager.instance.currentDay + " начался!");
