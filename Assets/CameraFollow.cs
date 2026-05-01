@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 targetPos = new Vector3(target.position.x, target.position.y, -10f);
+        Vector3 targetPos = new Vector3(target.position.x, target.position.y, -1f);
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
     }
 }
