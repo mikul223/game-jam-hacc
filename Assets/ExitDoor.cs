@@ -6,6 +6,8 @@ public class ExitDoor : MonoBehaviour
     public GameObject confirmPanel;
     public Transform streetSpawnPoint;
 
+    
+
     private bool playerNear = false;
 
     void Update()
@@ -46,6 +48,8 @@ public class ExitDoor : MonoBehaviour
     public void ConfirmYes()
     {
         confirmPanel.SetActive(false);
+
+        GameManager.instance.DetermineMood();
 
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null)

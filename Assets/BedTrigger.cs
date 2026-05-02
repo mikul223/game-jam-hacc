@@ -10,7 +10,6 @@ public class BedTrigger : MonoBehaviour
     public TextMeshProUGUI sleepHint;
     public GameObject bedPrompt;
 
-
     private bool playerNear = false;
     private bool sleeping = false;
 
@@ -30,36 +29,42 @@ public class BedTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerNear = true;
-            bedPrompt.SetActive(true);
+            if (bedPrompt != null) bedPrompt.SetActive(true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerNear = false;
-            bedPrompt.SetActive(false);
+            if (bedPrompt != null) bedPrompt.SetActive(false);
+        }
     }
 
     void GoToSleep()
     {
         sleeping = true;
         sleepPanel.SetActive(true);
-        bedPrompt.SetActive(false);
+        if (bedPrompt != null) bedPrompt.SetActive(false);
 
-        int day = GameManager.instance.currentDay;
-        int mistakes = GameManager.instance.mistakes;
+        GameManager gm = GameManager.instance;
+        if (gm == null) return;
+
+        int day = gm.currentDay;
+        int mistakes = gm.totalMistakes;
 
         sleepText.text = "Наступила ночь...\nДень " + day + " завершён.";
 
         if (mistakes == 0)
             sleepHint.text = "Сегодня всё прошло хорошо. Кликните, чтобы проснуться.";
-        else if (mistakes <= GameManager.instance.maxMistakes)
+        else if (mistakes <= gm.maxMistakesForGood)
             sleepHint.text = "Вы ошиблись, но завтра всё можно исправить. Кликните, чтобы проснуться.";
         else
             sleepHint.text = "Всё пошло не так... Кликните, чтобы проснуться.";
 
-        // Остановить игрока
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null) player.enabled = false;
     }
@@ -68,31 +73,26 @@ public class BedTrigger : MonoBehaviour
     {
         sleeping = false;
         sleepPanel.SetActive(false);
-        bedPrompt.SetActive(true);
 
-        // Переход на следующий день
         GameManager.instance.NextDay();
         GameManager.instance.workDoneToday = false;
 
-        // Показать, что начался новый день
-        Debug.Log("День " + GameManager.instance.currentDay + " начался!");
+        // Сброс счётчиков цветов
+        if (FlowerManager.instance != null)
+            FlowerManager.instance.ResetCounts();
 
-        // Обновить всех NPC
-        NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
+        // Обновить NPC
+        NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsInactive.Exclude);
         foreach (NPC npc in allNPCs)
         {
             npc.UpdateAppearance();
         }
 
-        // Включить игрока
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
-        if (player != null) player.enabled = true;
-
-        // Телепортировать игрока к началу локации (выход из дома)
-        GameObject spawn = GameObject.Find("SpawnPointHome");
-        if (spawn != null && player != null)
+        if (player != null)
         {
-            player.transform.position = spawn.transform.position;
+            player.enabled = true;
+            player.transform.position = transform.position + Vector3.left * 2f;
         }
     }
 }

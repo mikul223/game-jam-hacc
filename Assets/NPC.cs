@@ -4,17 +4,29 @@ using TMPro;
 
 public class NPC : MonoBehaviour
 {
-    [Header("Настройки NPC")]
+    [Header("Имя")]
     public string npcName;
-    public Sprite portrait;
-    [TextArea(3, 5)]
-    public string[] goodDialogs;
-    [TextArea(3, 5)]
-    public string[] badDialogs;
 
-    [Header("Цвет NPC (эмоция)")]
-    public Color goodColor = Color.white;
-    public Color badColor = Color.red;
+    [Header("Спрайты для каждого настроения")]
+    public Sprite normalSprite;
+    public Sprite angrySprite;
+    public Sprite sadSprite;
+    public Sprite happySprite;
+    public Sprite scaredSprite;
+
+    [Header("Портреты для диалогов")]
+    public Sprite normalPortrait;
+    public Sprite angryPortrait;
+    public Sprite sadPortrait;
+    public Sprite happyPortrait;
+    public Sprite scaredPortrait;
+
+    [Header("Реплики")]
+    [TextArea(2, 4)] public string[] normalDialogs;
+    [TextArea(2, 4)] public string[] angryDialogs;
+    [TextArea(2, 4)] public string[] sadDialogs;
+    [TextArea(2, 4)] public string[] happyDialogs;
+    [TextArea(2, 4)] public string[] scaredDialogs;
 
     [Header("Ссылки на UI")]
     public GameObject promptText;
@@ -36,13 +48,11 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        // Открыть диалог по F
         if (playerNear && Input.GetKeyDown(KeyCode.F) && !dialogOpen)
         {
             OpenDialog();
         }
 
-        // Переключение реплик по клику мыши
         if (dialogOpen && Input.GetMouseButtonDown(0))
         {
             NextDialog();
@@ -72,42 +82,31 @@ public class NPC : MonoBehaviour
         dialogOpen = true;
         dialogIndex = 0;
 
-        // Выбор реплик в зависимости от ошибок
-        int mistakes = GameManager.instance.mistakes;
-        currentDialogs = (mistakes == 0) ? goodDialogs : badDialogs;
+        GameManager.Mood mood = GameManager.instance.currentMood;
+        currentDialogs = GetDialogsForMood(mood);
+        Sprite portrait = GetPortraitForMood(mood);
 
-        // Показываем UI
         dialogPanel.SetActive(true);
         npcPortrait.sprite = portrait;
 
-        // Показываем первую реплику
-        ShowCurrentDialog();
+        if (currentDialogs.Length > 0)
+            dialogText.text = npcName + ": " + currentDialogs[0];
+        else
+            dialogText.text = npcName + ": ...";
 
-        // Останавливаем игрока
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null) player.enabled = false;
-    }
-
-    void ShowCurrentDialog()
-    {
-        if (currentDialogs != null && dialogIndex < currentDialogs.Length)
-        {
-            dialogText.text = npcName + ": " + currentDialogs[dialogIndex];
-        }
     }
 
     void NextDialog()
     {
         dialogIndex++;
-
-        if (currentDialogs != null && dialogIndex < currentDialogs.Length)
+        if (dialogIndex < currentDialogs.Length)
         {
-            // Следующая реплика
-            ShowCurrentDialog();
+            dialogText.text = npcName + ": " + currentDialogs[dialogIndex];
         }
         else
         {
-            // Реплики закончились — закрыть диалог
             CloseDialog();
         }
     }
@@ -117,7 +116,6 @@ public class NPC : MonoBehaviour
         dialogOpen = false;
         dialogPanel.SetActive(false);
 
-        // Включаем движение игрока
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null) player.enabled = true;
     }
@@ -125,7 +123,44 @@ public class NPC : MonoBehaviour
     public void UpdateAppearance()
     {
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-        int mistakes = GameManager.instance.mistakes;
-        spriteRenderer.color = (mistakes == 0) ? goodColor : badColor;
+
+        GameManager.Mood mood = GameManager.instance.currentMood;
+        spriteRenderer.sprite = GetSpriteForMood(mood);
+    }
+
+    Sprite GetSpriteForMood(GameManager.Mood mood)
+    {
+        switch (mood)
+        {
+            case GameManager.Mood.Angry: return angrySprite;
+            case GameManager.Mood.Sad: return sadSprite;
+            case GameManager.Mood.Happy: return happySprite;
+            case GameManager.Mood.Scared: return scaredSprite;
+            default: return normalSprite;
+        }
+    }
+
+    Sprite GetPortraitForMood(GameManager.Mood mood)
+    {
+        switch (mood)
+        {
+            case GameManager.Mood.Angry: return angryPortrait;
+            case GameManager.Mood.Sad: return sadPortrait;
+            case GameManager.Mood.Happy: return happyPortrait;
+            case GameManager.Mood.Scared: return scaredPortrait;
+            default: return normalPortrait;
+        }
+    }
+
+    string[] GetDialogsForMood(GameManager.Mood mood)
+    {
+        switch (mood)
+        {
+            case GameManager.Mood.Angry: return angryDialogs;
+            case GameManager.Mood.Sad: return sadDialogs;
+            case GameManager.Mood.Happy: return happyDialogs;
+            case GameManager.Mood.Scared: return scaredDialogs;
+            default: return normalDialogs;
+        }
     }
 }
