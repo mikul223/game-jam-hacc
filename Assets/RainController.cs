@@ -2,14 +2,24 @@ using UnityEngine;
 
 public class RainController : MonoBehaviour
 {
+    void Start()
+    {
+        GameManager gm = GameManager.instance;
+        if (gm != null && gm.isRaining)
+        {
+            gameObject.SetActive(true);
+            Debug.Log("RAIN: Дождь включён при старте!");
+        }
+        else
+        {
+            Debug.Log("RAIN: gm=" + (gm != null) + " isRaining=" + (gm != null ? gm.isRaining : false));
+        }
+    }
+
     void Update()
     {
         GameManager gm = GameManager.instance;
         if (gm == null) return;
-
-        if (gm.isRaining && !gameObject.activeSelf)
-            gameObject.SetActive(true);
-        else if (!gm.isRaining && gameObject.activeSelf)
-            gameObject.SetActive(false);
+        gameObject.SetActive(gm.isRaining);
     }
 }

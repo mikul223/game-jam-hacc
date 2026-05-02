@@ -1,8 +1,8 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария" at "2026-05-02T19:45:17.3445118Z"
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'ru' Physical Memory: 16104 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария" at "2026-05-02T18:53:25.0073311Z"
 System  architecture: x64
 Process architecture: x64
-Date: 2026-05-02T18:53:25Z
+Date: 2026-05-02T19:45:17Z
