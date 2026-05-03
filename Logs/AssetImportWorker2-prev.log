@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария" at "2026-05-03T21:35:20.6771711Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'ru' Physical Memory: 16104 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-05-03T21:35:20Z
+Date: 2026-05-03T15:44:37Z
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария" at "2026-05-03T15:44:37.172039Z"
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
@@ -13,13 +13,13 @@ C:\Program Files\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker2
 -projectPath
 C:/Users/NEO/My project
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker2.log
 -srvPort
-64003
+60294
 -licensingIpc
 LicenseClient-Мария
 -force-d3d12
@@ -68,18 +68,18 @@ C:/Users/NEO/My project
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [16308]  Target information:
+Player connection [8844]  Target information:
 
-Player connection [16308]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2374244755 [EditorId] 2374244755 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8844]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2592487035 [EditorId] 2592487035 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16308]  * "[IP] 26.131.254.69 [Port] 0 [Flags] 2 [Guid] 2374244755 [EditorId] 2374244755 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8844]  * "[IP] 26.131.254.69 [Port] 0 [Flags] 2 [Guid] 2592487035 [EditorId] 2592487035 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16308]  * "[IP] 172.30.64.1 [Port] 0 [Flags] 2 [Guid] 2374244755 [EditorId] 2374244755 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8844]  * "[IP] 172.19.48.1 [Port] 0 [Flags] 2 [Guid] 2592487035 [EditorId] 2592487035 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16308]  * "[IP] 10.188.166.42 [Port] 0 [Flags] 2 [Guid] 2374244755 [EditorId] 2374244755 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8844]  * "[IP] 192.168.0.101 [Port] 0 [Flags] 2 [Guid] 2592487035 [EditorId] 2592487035 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q3RF0MG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16308] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16308] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8844] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8844] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -91,7 +91,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 4.53 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.24 ms, found 5 plugins.
 Initialize engine version: 6000.4.4f1 (360f97ecca93)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/NEO/My project/Assets
@@ -109,19 +109,13 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56016
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Мария"
-[Licensing::IpcConnector] LicenseClient-Мария channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария-6000.4.4" at "2026-05-03T21:35:21.6284284Z"
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002035 seconds.
+Registered in 0.003091 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -130,36 +124,44 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.370 seconds
-Domain Reload Profiling: 754ms
-	BeginReloadAssembly (102ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (184ms)
-		LoadAssemblies (100ms)
-		AnalyzeDomain (176ms)
-			TypeCache.Refresh (175ms)
-				TypeCache.ScanAssembly (160ms)
-	FinalizeReload (371ms)
+- Finished resetting the current domain, in  0.561 seconds
+Domain Reload Profiling: 1064ms
+	BeginReloadAssembly (126ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (254ms)
+		LoadAssemblies (124ms)
+		AnalyzeDomain (241ms)
+			TypeCache.Refresh (238ms)
+				TypeCache.ScanAssembly (219ms)
+	FinalizeReload (562ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (41ms)
-			BeforeProcessingInitializeOnLoad (78ms)
-			ProcessInitializeOnLoadAttributes (101ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
+			InitializePlatformSupportModulesInManaged (69ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (148ms)
+			ProcessInitializeOnLoadMethodAttributes (121ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Мария"
+[Licensing::IpcConnector] LicenseClient-Мария channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария-6000.4.4" at "2026-05-03T15:44:39.5614217Z"
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              96d09f3a0b664b29aa707eeab4646d37
-  Correlation Id:          da12c7bd659c948e233b0c50da179098
-  External correlation Id: 1880774005105198959
+  Session Id:              99b8857d5a104021af1a88fa489c3250
+  Correlation Id:          6d054de8a6ea779dbacc389411a528b6
+  External correlation Id: 8325846139886137982
   Machine Id:              IG70BjtbNRefmsLILAADr5A33Ls=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Мария-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.82s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария-6000.4.4-notifications" at "2026-05-03T21:35:22.4490199Z"
-[Licensing::Module] Licensing Background thread has ended after 1.77s
-Begin MonoManager ReloadAssembly
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Мария-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 3.25s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Мария-6000.4.4-notifications" at "2026-05-03T15:44:42.8178265Z"
+[Licensing::Module] Licensing Background thread has ended after 5.65s
+[Licensing::Module] Licensing is initialized (took 3.16s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 9072385489012-UnityPersXXXX
@@ -208,56 +210,88 @@ Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 5.36 ms, found 5 plugins.
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.320 seconds
-Domain Reload Profiling: 2067ms
-	BeginReloadAssembly (160ms)
-		DisableScriptedObjects (4ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (484ms)
-		LoadAssemblies (317ms)
-		AnalyzeDomain (244ms)
-			TypeCache.Refresh (169ms)
-				TypeCache.ScanAssembly (153ms)
-			BuildScriptInfoCaches (62ms)
+- Finished resetting the current domain, in  0.720 seconds
+Domain Reload Profiling: 4694ms
+	BeginReloadAssembly (3336ms)
+		DisableScriptedObjects (5ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (522ms)
+		LoadAssemblies (349ms)
+		AnalyzeDomain (260ms)
+			TypeCache.Refresh (182ms)
+				TypeCache.ScanAssembly (165ms)
+			BuildScriptInfoCaches (66ms)
 			ResolveRequiredComponents (11ms)
-	FinalizeReload (1321ms)
+	FinalizeReload (721ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (270ms)
-			ProcessInitializeOnLoadAttributes (564ms)
-			ProcessInitializeOnLoadMethodAttributes (215ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 3.57 ms, found 5 plugins.
+			BeforeProcessingInitializeOnLoad (141ms)
+			ProcessInitializeOnLoadAttributes (283ms)
+			ProcessInitializeOnLoadMethodAttributes (131ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7311 unused Assets / (6.1 MB). Loaded Objects now: 8152.
-Memory consumption went from 163.7 MB to 157.6 MB.
-Total: 8.907800 ms (FindLiveObjects: 1.136300 ms CreateObjectMapping: 0.450200 ms MarkObjects: 4.493600 ms  DeleteObjects: 2.824300 ms)
+Unloading 7311 unused Assets / (5.1 MB). Loaded Objects now: 8152.
+Memory consumption went from 169.7 MB to 164.6 MB.
+Total: 9.882000 ms (FindLiveObjects: 0.705200 ms CreateObjectMapping: 0.746200 ms MarkObjects: 5.764100 ms  DeleteObjects: 2.662600 ms)
 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.25 ms, found 5 plugins.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7295 unused Assets / (5.0 MB). Loaded Objects now: 8153.
-Memory consumption went from 161.2 MB to 156.3 MB.
-Total: 9.686000 ms (FindLiveObjects: 0.644100 ms CreateObjectMapping: 0.534400 ms MarkObjects: 6.257100 ms  DeleteObjects: 2.248500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1199.175322 seconds.
-  path: Assets/DogFollow.cs
-  importAddress: Guid(f5bb3aba1c8eff046992fe15f65a411c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DogFollow.cs using Guid(f5bb3aba1c8eff046992fe15f65a411c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a8df743ec91deafac5630e73981b60c1') in 0.0218302 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d7e8aa0ca1f0e0571688f69c7a1ab71 DependenciesID=6a6e3a1a848aed0cb015d9fd867a805f StaticDependenciesID=ecb675636267b9fd571f864a8140ac5b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 149349.730417 seconds.
+  path: Assets/New Folder/nps1NORMAL.png
+  importAddress: Guid(dc0d087a92956824cab4b30b814a2c6c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps1NORMAL.png using Guid(dc0d087a92956824cab4b30b814a2c6c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '19b797fc132d9d3441d2f86399c8a3b4') in 0.1290904 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=576a172248f725c287e66a196fac379f DependenciesID=cd9ea2e5e29edb7fb0f5fe89851e772c StaticDependenciesID=8f679d22157cf99b4dbd39ef19b28e40 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.227992 seconds.
+  path: Assets/New Folder/nps2ANGRY.png
+  importAddress: Guid(6403df9fa56972c4cb9dcc53a3d0eb34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps2ANGRY.png using Guid(6403df9fa56972c4cb9dcc53a3d0eb34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '94ab9fc9c4ff40f92beca7dd2681b813') in 0.026336 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fda301a157f4efbc6f02d6854233a8a DependenciesID=c909d8a2641deeeb51defe0e7226418d StaticDependenciesID=4bbbc34f6efc20dd2ffb883e80e12a23 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.793719 seconds.
+  path: Assets/New Folder/nps3NORMAL.png
+  importAddress: Guid(096143e1a0f7b5147bf3048c2423b02a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps3NORMAL.png using Guid(096143e1a0f7b5147bf3048c2423b02a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0d00d84c895078937b261592fd25b818') in 0.0245785 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=da9b2353e7b27a1ef85b9d022c0ce71e DependenciesID=21f6849e00664fb66a1e6e2413e8ecdc StaticDependenciesID=9ec031ff0787a78a02c2b8a4621232d2 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.084086 seconds.
+  path: Assets/New Folder/nps4SAD.png
+  importAddress: Guid(808cc9604cc16d0409ab5cd7e9a807bc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps4SAD.png using Guid(808cc9604cc16d0409ab5cd7e9a807bc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '97055d3493160fa50207d6e5b20ed180') in 0.020746 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3f32f326d327518f3d26e0e0bdfb653f DependenciesID=78eeb98bb547e3eac618572ce7e5cefd StaticDependenciesID=ad6b1f7a721f3b4f7f9d0405a73dacc4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/New Folder/nps4ANGRY.png
+  importAddress: Guid(fc3795b6712ffa845999df13d1e1c46f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps4ANGRY.png using Guid(fc3795b6712ffa845999df13d1e1c46f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '15ab77e23e6c64a89f8801b8cc761c4c') in 0.0213433 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8506a406ab4a12877465095e4f71a3db DependenciesID=4ea71fe3ee0e57d03019ae0103b4247a StaticDependenciesID=84f5c327edd41e1f33c0193df8d660c6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.107475 seconds.
+  path: Assets/New Folder/nps5ANGRY.png
+  importAddress: Guid(ba7e6673cd0eeed48b18c373180ccb05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Folder/nps5ANGRY.png using Guid(ba7e6673cd0eeed48b18c373180ccb05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bef551eafd3c0381ed41c806f326ae1a') in 0.0276676 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a618ad3bb86d4b608ae4ebc08f34e79f DependenciesID=4c3ce47a66a691e09139ef05a94876c8 StaticDependenciesID=e4612ea289b940978b2d424af9a39d72 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
