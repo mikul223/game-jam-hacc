@@ -51,8 +51,7 @@ public class BedTrigger : MonoBehaviour
         GameManager gm = GameManager.instance;
         if (gm == null) return;
 
-        // Проверка: нельзя спать, если не работал
-        if (!gm.workDoneToday && gm.currentDay > 1) 
+        if (!gm.workDoneToday && gm.currentDay > 1)
         {
             Debug.Log("Нельзя спать — вы ещё не были на работе!");
             if (bedPrompt != null) bedPrompt.SetActive(false);
@@ -65,16 +64,7 @@ public class BedTrigger : MonoBehaviour
         if (bedPrompt != null) bedPrompt.SetActive(false);
 
         int day = gm.currentDay;
-        int mistakes = gm.totalMistakes;
-
         sleepText.text = "Наступила ночь...\nДень " + day + " завершён.";
-
-        if (mistakes == 0)
-            sleepHint.text = "Сегодня всё прошло хорошо. Кликните, чтобы проснуться.";
-        else if (mistakes <= gm.maxMistakesForGood)
-            sleepHint.text = "Вы ошиблись, но завтра всё можно исправить. Кликните, чтобы проснуться.";
-        else
-            sleepHint.text = "Всё пошло не так... Кликните, чтобы проснуться.";
 
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null) player.enabled = false;
@@ -92,8 +82,7 @@ public class BedTrigger : MonoBehaviour
         {
             Canvas canvas = FindAnyObjectByType<Canvas>();
             GameEnding ending = canvas.GetComponent<GameEnding>();
-            if (ending != null)
-                ending.ShowEnding();
+            if (ending != null) ending.ShowEnding();
             return;
         }
 
@@ -101,26 +90,12 @@ public class BedTrigger : MonoBehaviour
         DayIntro intro = canvas2.GetComponent<DayIntro>();
         if (intro != null) intro.ShowDayIntro(GameManager.instance.currentDay);
 
-
-        if (GameManager.instance.currentDay > GameManager.instance.totalDays)
-        {
-            Canvas canvas = FindAnyObjectByType<Canvas>();
-            GameEnding ending = canvas.GetComponent<GameEnding>();
-            if (ending != null)
-            {
-                ending.ShowEnding();
-            }
-            return;
-        }
-
         if (FlowerManager.instance != null)
             FlowerManager.instance.ResetCounts();
 
         NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsInactive.Exclude);
         foreach (NPC npc in allNPCs)
-        {
             npc.UpdateAppearance();
-        }
 
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null)

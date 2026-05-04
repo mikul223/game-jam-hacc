@@ -236,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 14390503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.3, y: 5.8232155, z: 0}
+  m_LocalPosition: {x: -50.3, y: 4.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6228,7 +6228,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -50.334137, y: 0.04228449}
+  m_Offset: {x: -50.334137, y: -1.5968735}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6238,7 +6238,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.889099, y: 11.871903}
+  m_Size: {x: 7.889099, y: 8.593588}
   m_EdgeRadius: 0
 --- !u!4 &945465900
 Transform:
@@ -8093,6 +8093,7 @@ MonoBehaviour:
   isRaining: 0
   wasRandomMood: 0
   savedWasRandom: 0
+  bodyChanged: 0
   savedMood: 0
   overRed: 0
   overBlue: 0
@@ -9914,6 +9915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783271419}
   - component: {fileID: 1783271420}
+  - component: {fileID: 1783271421}
   m_Layer: 0
   m_Name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u04384_0"
   m_TagString: Untagged
@@ -9985,7 +9987,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1674844973221714765, guid: 8dabb84a19e462b44b51b0531678b557, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9993,8 +9995,22 @@ SpriteRenderer:
   m_Size: {x: 1.08, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1783271421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783271418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ae9e0062ad874428a422eda61bb932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHead
+  normalHead: {fileID: 1674844973221714765, guid: 8dabb84a19e462b44b51b0531678b557, type: 3}
+  changedHead: {fileID: -655124710661819704, guid: 251c60940f6b8814bba74384333157e8, type: 3}
 --- !u!1 &1842851951
 GameObject:
   m_ObjectHideFlags: 0

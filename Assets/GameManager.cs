@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public bool wasRandomMood = false;
     public bool savedWasRandom = false;
+    public bool bodyChanged = false;
 
     public Mood savedMood = Mood.Normal;
 
@@ -127,6 +128,7 @@ public class GameManager : MonoBehaviour
             currentMood = savedMood;
             wasRandomMood = savedWasRandom;
             isRaining = true;
+            bodyChanged = true;
             Debug.Log($"Слишком много ошибок. NPC остались: {currentMood}, random={wasRandomMood}");
         }
 
