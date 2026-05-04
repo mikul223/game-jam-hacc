@@ -85,15 +85,12 @@ public class BedTrigger : MonoBehaviour
         sleeping = false;
         sleepPanel.SetActive(false);
 
-        // Следующий день (меняет currentMood и isRaining внутри)
         GameManager.instance.NextDay();
         GameManager.instance.workDoneToday = false;
 
-        // Сброс счётчиков цветов
         if (FlowerManager.instance != null)
             FlowerManager.instance.ResetCounts();
 
-        // Обновить NPC (использует currentMood из GameManager)
         NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsInactive.Exclude);
         foreach (NPC npc in allNPCs)
         {

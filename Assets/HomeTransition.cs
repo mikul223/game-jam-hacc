@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelTransition : MonoBehaviour
 {
-    public Transform targetPoint;   // куда телепортировать игрока
+    public Transform targetPoint;
 
     void OnTriggerEnter2D(Collider2D other)
     {

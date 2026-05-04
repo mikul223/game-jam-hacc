@@ -49,13 +49,9 @@ public class ExitDoor : MonoBehaviour
     {
         confirmPanel.SetActive(false);
 
-        //Определяем последствия
         GameManager.instance.DetermineMood();
-
-        // Ставим флаг завершения работы
         GameManager.instance.workDoneToday = true;
 
-        //  Обновляем NPC 
         NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsInactive.Exclude);
         foreach (NPC npc in allNPCs)
         {

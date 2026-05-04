@@ -11,7 +11,6 @@ public class FieldEntranceTrigger : MonoBehaviour
 
         if (GameManager.instance.workDoneToday)
         {
-            // День завершён — показать сообщение
             if (blockedMessage != null)
             {
                 blockedMessage.SetActive(true);
@@ -20,7 +19,6 @@ public class FieldEntranceTrigger : MonoBehaviour
         }
         else
         {
-            // Телепорт в поле
             other.transform.position = fieldSpawnPoint.position;
         }
     }

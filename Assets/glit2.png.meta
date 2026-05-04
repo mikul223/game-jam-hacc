@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 2bd78abb3411e7441a6c439a897f0904
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6795070344655003239
+    second: glit2_0
+  - first:
+      213: -4798447590634528258
+    second: glit2_1
+  - first:
+      213: 6378316559141308898
+    second: glit2_2
+  - first:
+      213: -6956603907531458980
+    second: glit2_3
+  - first:
+      213: 929954286044619071
+    second: glit2_4
+  - first:
+      213: 4229958401815337857
+    second: glit2_5
+  - first:
+      213: -3933803703197913205
+    second: glit2_6
+  - first:
+      213: 5601154978369442145
+    second: glit2_7
+  - first:
+      213: 4760227160635933524
+    second: glit2_8
+  - first:
+      213: 2377831982589561251
+    second: glit2_9
+  - first:
+      213: 1788091517484302664
+    second: glit2_10
+  - first:
+      213: -674527349195074532
+    second: glit2_11
+  - first:
+      213: -2561439583842483674
+    second: glit2_12
+  - first:
+      213: -2559272593609718274
+    second: glit2_13
+  - first:
+      213: 2464128407827712382
+    second: glit2_14
+  - first:
+      213: -1306140879619900032
+    second: glit2_15
+  - first:
+      213: -1962678604074452177
+    second: glit2_16
+  - first:
+      213: -7613907612989354887
+    second: glit2_17
+  - first:
+      213: -543824084498955828
+    second: glit2_18
+  - first:
+      213: -1838968141042013610
+    second: glit2_19
+  - first:
+      213: -4549741404816955847
+    second: glit2_20
+  - first:
+      213: 6772076092551451089
+    second: glit2_21
+  - first:
+      213: -829998023986349192
+    second: glit2_22
+  - first:
+      213: -1223983090342204512
+    second: glit2_23
+  - first:
+      213: 5234907780068955755
+    second: glit2_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glit2_0
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2108
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9912c0bf58f03b1a0800000000000000
+      internalID: -6795070344655003239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2097
+        width: 76
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef166eee65d786db0800000000000000
+      internalID: -4798447590634528258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 2066
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e90c94ed15548850800000000000000
+      internalID: 6378316559141308898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2025
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c563e709a9d257f90800000000000000
+      internalID: -6956603907531458980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2056
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31aa0dfe7cd7ec00800000000000000
+      internalID: 929954286044619071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2077
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bd1e251c4d3ba30800000000000000
+      internalID: 4229958401815337857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1820
+        width: 44
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fa5c6cf525869c0800000000000000
+      internalID: -3933803703197913205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 940
+        width: 2488
+        height: 1128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1611f91d6cc4bbd40800000000000000
+      internalID: 5601154978369442145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1751
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4530fdfb169bf0240800000000000000
+      internalID: 4760227160635933524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1745
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a940d10791cff020800000000000000
+      internalID: 2377831982589561251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1707
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8418a8de2c390d810800000000000000
+      internalID: 1788091517484302664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_11
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1684
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1411ff13f893a6f0800000000000000
+      internalID: -674527349195074532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1615
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 622c1730540f37cd0800000000000000
+      internalID: -2561439583842483674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_13
+      rect:
+        serializedVersion: 2
+        x: 2547
+        y: 1215
+        width: 65
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5008eb223ab7cd0800000000000000
+      internalID: -2559272593609718274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_14
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1166
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79058d3bb7523220800000000000000
+      internalID: 2464128407827712382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_15
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1142
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08db3ab4ac7afdde0800000000000000
+      internalID: -1306140879619900032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_16
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 1088
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2bf1e3553a23c4e0800000000000000
+      internalID: -1962678604074452177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_17
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1028
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c802fbd57f55690800000000000000
+      internalID: -7613907612989354887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_18
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 909
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1432f50e2f378f0800000000000000
+      internalID: -543824084498955828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_19
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 898
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a2eef083caa76e0800000000000000
+      internalID: -1838968141042013610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_20
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 929
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936aff14c421cd0c0800000000000000
+      internalID: -4549741404816955847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_21
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 919
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1d170835f3bfd50800000000000000
+      internalID: 6772076092551451089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_22
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 857
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b7408d1314b74f0800000000000000
+      internalID: -829998023986349192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_23
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 867
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab61114dd9830fe0800000000000000
+      internalID: -1223983090342204512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glit2_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 777
+        width: 6
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6650f6e3e026a840800000000000000
+      internalID: 5234907780068955755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glit2_0: -6795070344655003239
+      glit2_1: -4798447590634528258
+      glit2_10: 1788091517484302664
+      glit2_11: -674527349195074532
+      glit2_12: -2561439583842483674
+      glit2_13: -2559272593609718274
+      glit2_14: 2464128407827712382
+      glit2_15: -1306140879619900032
+      glit2_16: -1962678604074452177
+      glit2_17: -7613907612989354887
+      glit2_18: -543824084498955828
+      glit2_19: -1838968141042013610
+      glit2_2: 6378316559141308898
+      glit2_20: -4549741404816955847
+      glit2_21: 6772076092551451089
+      glit2_22: -829998023986349192
+      glit2_23: -1223983090342204512
+      glit2_24: 5234907780068955755
+      glit2_3: -6956603907531458980
+      glit2_4: 929954286044619071
+      glit2_5: 4229958401815337857
+      glit2_6: -3933803703197913205
+      glit2_7: 5601154978369442145
+      glit2_8: 4760227160635933524
+      glit2_9: 2377831982589561251
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
