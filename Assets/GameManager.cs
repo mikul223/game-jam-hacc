@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,20 @@ public class GameManager : MonoBehaviour
 
     public enum Mood { Normal, Angry, Sad, Happy, Scared }
     public Mood currentMood = Mood.Normal;
+
+    void Start()
+    {
+        StartCoroutine(ShowIntroDelayed());
+    }
+
+    IEnumerator ShowIntroDelayed()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Canvas canvas = FindAnyObjectByType<Canvas>();
+        DayIntro intro = canvas.GetComponent<DayIntro>();
+        if (intro != null)
+            intro.ShowDayIntro(currentDay);
+    }
 
     void Awake()
     {
