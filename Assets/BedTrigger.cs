@@ -10,6 +10,8 @@ public class BedTrigger : MonoBehaviour
     public TextMeshProUGUI sleepHint;
     public GameObject bedPrompt;
 
+    public GameObject cantSleepMessage; 
+
     private bool playerNear = false;
     private bool sleeping = false;
 
@@ -44,14 +46,23 @@ public class BedTrigger : MonoBehaviour
         }
     }
 
-    void GoToSleep()
+   void GoToSleep()
     {
+        GameManager gm = GameManager.instance;
+        if (gm == null) return;
+
+        // Проверка: нельзя спать, если не работал
+        if (!gm.workDoneToday && gm.currentDay > 1) 
+        {
+            Debug.Log("Нельзя спать — вы ещё не были на работе!");
+            if (bedPrompt != null) bedPrompt.SetActive(false);
+            ShowCantSleepMessage();
+            return;
+        }
+
         sleeping = true;
         sleepPanel.SetActive(true);
         if (bedPrompt != null) bedPrompt.SetActive(false);
-
-        GameManager gm = GameManager.instance;
-        if (gm == null) return;
 
         int day = gm.currentDay;
         int mistakes = gm.totalMistakes;
@@ -95,5 +106,20 @@ public class BedTrigger : MonoBehaviour
             player.enabled = true;
             player.transform.position = transform.position + Vector3.left * 2f;
         }
+    }
+
+    void ShowCantSleepMessage()
+    {
+        if (cantSleepMessage != null)
+        {
+            cantSleepMessage.SetActive(true);
+            Invoke("HideCantSleepMessage", 2f);
+        }
+    }
+
+    void HideCantSleepMessage()
+    {
+        if (cantSleepMessage != null)
+            cantSleepMessage.SetActive(false);
     }
 }
