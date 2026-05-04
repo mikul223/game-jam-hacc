@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
     public Sprite sadSprite;
     public Sprite happySprite;
     public Sprite scaredSprite;
+    
 
     [Header("Портреты для диалогов")]
     public Sprite normalPortrait;
@@ -39,6 +40,7 @@ public class NPC : MonoBehaviour
     private bool dialogOpen = false;
     private string[] currentDialogs;
     private int dialogIndex = 0;
+    private GameManager.Mood myMood;
 
     void Start()
     {
@@ -82,9 +84,8 @@ public class NPC : MonoBehaviour
         dialogOpen = true;
         dialogIndex = 0;
 
-        GameManager.Mood mood = GameManager.instance.currentMood;
-        currentDialogs = GetDialogsForMood(mood);
-        Sprite portrait = GetPortraitForMood(mood);
+        currentDialogs = GetDialogsForMood(myMood);
+        Sprite portrait = GetPortraitForMood(myMood);
 
         dialogPanel.SetActive(true);
         npcPortrait.sprite = portrait;
@@ -123,10 +124,57 @@ public class NPC : MonoBehaviour
     public void UpdateAppearance()
     {
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null) return;
 
-        GameManager.Mood mood = GameManager.instance.currentMood;
-        spriteRenderer.sprite = GetSpriteForMood(mood);
+        GameManager gm = GameManager.instance;
+
+        // Если сегодня работа не завершена — берём настроение из GM
+        if (!gm.workDoneToday)
+        {
+            // Если был случайный набор — даём случайную эмоцию
+            if (gm.wasRandomMood)
+            {
+                myMood = (GameManager.Mood)Random.Range(1, 5);
+            }
+            else
+            {
+                myMood = gm.currentMood;
+            }
+            spriteRenderer.sprite = GetSpriteForMood(myMood);
+            Debug.Log($"{npcName}: день {gm.currentDay}, работа не завершена, настроение = {myMood}");
+            return;
+        }
+
+        // После работы — проверяем
+        FlowerManager fm = FlowerManager.instance;
+        
+        bool allCorrect = (fm.redCount == fm.redNormal && 
+                        fm.blueCount == fm.blueNormal && 
+                        fm.yellowCount == fm.yellowNormal && 
+                        fm.purpleCount == fm.purpleNormal);
+
+        if (allCorrect)
+        {
+            myMood = GameManager.Mood.Normal;
+        }
+        else
+        {
+            GameManager.Mood gmMood = GameManager.instance.currentMood;
+            bool randomMood = GameManager.instance.wasRandomMood;
+            
+            if (randomMood || gmMood == GameManager.Mood.Normal)
+            {
+                myMood = (GameManager.Mood)Random.Range(1, 5);
+            }
+            else
+            {
+                myMood = gmMood;
+            }
+        }
+
+        spriteRenderer.sprite = GetSpriteForMood(myMood);
     }
+
 
     Sprite GetSpriteForMood(GameManager.Mood mood)
     {

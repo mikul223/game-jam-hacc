@@ -6,12 +6,16 @@ public class GameManager : MonoBehaviour
 
     public int currentDay = 1;
     public int totalDays = 5;
-    public int totalMistakes = 0;       // сколько дней с ошибками
-    public int maxMistakesForGood = 1;  // если ≤1 — хорошая концовка
+    public int totalMistakes = 0;
+    public int maxMistakesForGood = 1;
     public bool workDoneToday = false;
     public bool isRaining = false;
 
-    // Переборы цветов
+    public bool wasRandomMood = false;
+    public bool savedWasRandom = false;
+
+    public Mood savedMood = Mood.Normal;
+
     public int overRed = 0;
     public int overBlue = 0;
     public int overYellow = 0;
@@ -31,8 +35,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        isRaining = true;
     }
 
     public void CalculateOvercollect()
@@ -50,23 +52,45 @@ public class GameManager : MonoBehaviour
     {
         CalculateOvercollect();
 
+        FlowerManager fm = FlowerManager.instance;
         int maxOver = Mathf.Max(overRed, overBlue, overYellow, overPurple);
 
-        if (maxOver == 0)
+        bool allCorrect = (fm.redCount == fm.redNormal && 
+                        fm.blueCount == fm.blueNormal && 
+                        fm.yellowCount == fm.yellowNormal && 
+                        fm.purpleCount == fm.purpleNormal);
+
+        if (allCorrect)
         {
             currentMood = Mood.Normal;
+            savedMood = Mood.Normal;
+            wasRandomMood = false;
+            savedWasRandom = false;
+            Debug.Log("Всё собрано правильно.");
             return;
         }
 
-        // Какой цвет перебрали больше всего
-        if (overRed == maxOver) currentMood = Mood.Angry;
-        else if (overBlue == maxOver) currentMood = Mood.Sad;
-        else if (overYellow == maxOver) currentMood = Mood.Happy;
-        else if (overPurple == maxOver) currentMood = Mood.Scared;
-
-        // Если есть хоть какой-то перебор — это ошибка
         totalMistakes++;
-        Debug.Log($"Ошибка! Доминирующий цвет: {currentMood}. Всего ошибок: {totalMistakes}");
+
+        if (maxOver > 0)
+        {
+            if (overRed == maxOver) currentMood = Mood.Angry;
+            else if (overBlue == maxOver) currentMood = Mood.Sad;
+            else if (overYellow == maxOver) currentMood = Mood.Happy;
+            else if (overPurple == maxOver) currentMood = Mood.Scared;
+            wasRandomMood = false;
+            Debug.Log($"Ошибка! Доминирующий цвет: {currentMood}. Всего ошибок: {totalMistakes}");
+        }
+        else
+        {
+            currentMood = Mood.Normal;
+            wasRandomMood = true;
+            Debug.Log($"Ошибка! Неполный сбор. NPC получат случайные эмоции. Всего ошибок: {totalMistakes}");
+        }
+
+        savedMood = currentMood;
+        savedWasRandom = wasRandomMood;
+        Debug.Log($"Эмоция сохранена: {savedMood}, random={savedWasRandom}");
     }
 
     public void NextDay()
@@ -76,19 +100,21 @@ public class GameManager : MonoBehaviour
 
         if (totalMistakes <= maxMistakesForGood)
         {
-            // Ошибок мало — всё сбрасывается
             currentMood = Mood.Normal;
+            savedMood = Mood.Normal;
+            wasRandomMood = false;
+            savedWasRandom = false;
             isRaining = false;
             Debug.Log("Всё хорошо, NPC вернулись в норму.");
         }
         else
         {
-            // Ошибок много — дождь и NPC не сбрасываются
+            currentMood = savedMood;
+            wasRandomMood = savedWasRandom;
             isRaining = true;
-            Debug.Log("Слишком много ошибок. Дождь идёт, NPC не вернулись.");
+            Debug.Log($"Слишком много ошибок. NPC остались: {currentMood}, random={wasRandomMood}");
         }
 
-        // Сброс дневных счётчиков
         overRed = 0;
         overBlue = 0;
         overYellow = 0;

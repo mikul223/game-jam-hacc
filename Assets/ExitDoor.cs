@@ -45,11 +45,22 @@ public class ExitDoor : MonoBehaviour
         if (player != null) player.enabled = false;
     }
 
-    public void ConfirmYes()
+   public void ConfirmYes()
     {
         confirmPanel.SetActive(false);
 
+        //Определяем последствия
         GameManager.instance.DetermineMood();
+
+        // Ставим флаг завершения работы
+        GameManager.instance.workDoneToday = true;
+
+        //  Обновляем NPC 
+        NPC[] allNPCs = FindObjectsByType<NPC>(FindObjectsInactive.Exclude);
+        foreach (NPC npc in allNPCs)
+        {
+            npc.UpdateAppearance();
+        }
 
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null)
@@ -57,8 +68,6 @@ public class ExitDoor : MonoBehaviour
             player.enabled = true;
             player.transform.position = streetSpawnPoint.position;
         }
-
-        GameManager.instance.workDoneToday = true;
     }
 
     public void ConfirmNo()
