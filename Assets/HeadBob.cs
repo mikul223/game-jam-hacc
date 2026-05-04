@@ -26,7 +26,6 @@ public class HeadBob : MonoBehaviour
         }
         else
         {
-            // Плавно возвращаем на место
             timer = 0f;
             transform.localPosition = Vector3.Lerp(transform.localPosition, startPos, Time.deltaTime * 10f);
         }

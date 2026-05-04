@@ -35,7 +35,7 @@ public class StarField : MonoBehaviour
 
             float x = Random.Range(-spreadX / 2f, spreadX / 2f);
             float y = Random.Range(-spreadY / 2f, spreadY / 2f);
-            star.transform.localPosition = new Vector3(x, y, 10); // Z=10 чтобы было перед камерой
+            star.transform.localPosition = new Vector3(x, y, 10);
             startPositions[i] = star.transform.localPosition;
 
             float size = Random.Range(0.5f, 1.5f) * starSize;

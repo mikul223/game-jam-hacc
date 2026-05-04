@@ -10,10 +10,9 @@ public class GameEnding : MonoBehaviour
 
     void Start()
     {
-        ShowEnding();
     }
 
-    void ShowEnding()
+    public void ShowEnding()
     {
         GameManager gm = GameManager.instance;
         if (gm == null) return;
@@ -24,7 +23,7 @@ public class GameEnding : MonoBehaviour
         {
             endingTitle.text = "Хорошая концовка";
             endingTitle.color = new Color(0.8f, 1f, 0.8f);
-            endingText.text = "Вы справились. Работа выполнена правильно, город живёт своей жизнью, а соседи всё так же приветливо машут вам по утрам.\n\nИногда лучший выбор — это не экспериментировать, а просто делать то, что просят.";
+            endingText.text = "Вы справились. Цветы собраны как нужно, город живёт своей жизнью, а соседи всё так же приветливо машут вам по утрам.\n\nИногда лучший выбор — это не экспериментировать, а просто делать то, что просят.";
         }
         else
         {
@@ -34,5 +33,14 @@ public class GameEnding : MonoBehaviour
         }
 
         endingPanel.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
     }
 }

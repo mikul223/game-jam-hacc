@@ -88,6 +88,18 @@ public class BedTrigger : MonoBehaviour
         GameManager.instance.NextDay();
         GameManager.instance.workDoneToday = false;
 
+
+        if (GameManager.instance.currentDay > GameManager.instance.totalDays)
+        {
+            Canvas canvas = FindAnyObjectByType<Canvas>();
+            GameEnding ending = canvas.GetComponent<GameEnding>();
+            if (ending != null)
+            {
+                ending.ShowEnding();
+            }
+            return;
+        }
+
         if (FlowerManager.instance != null)
             FlowerManager.instance.ResetCounts();
 

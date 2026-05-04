@@ -19,7 +19,6 @@ public class PlayerFlip : MonoBehaviour
 
     void LateUpdate()
     {
-        // Всегда держим Y положительным, Z = 1
         Vector3 scale = transform.localScale;
         scale.y = Mathf.Abs(scale.y);
         scale.z = 1;

@@ -13,21 +13,17 @@ public class DogFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        // Определяем направление персонажа
         float targetScaleX = target.localScale.x;
         bool targetFacingRight = targetScaleX > 0;
 
-        // Вычисляем позицию с учётом направления
         Vector3 offsetDirection = offset;
         if (!targetFacingRight)
             offsetDirection.x = -offset.x;
 
         Vector3 targetPos = target.position + offsetDirection;
 
-        // Плавное движение
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, followDelay);
 
-        // Зеркалим собаку вместе с персонажем
         if (targetFacingRight != facingRight)
         {
             facingRight = targetFacingRight;
